@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/blanc">
+
+    <!-- Logo en haut au centre -->
+    <ImageView
+        android:id="@+id/logo_imageview"
+        android:layout_width="212dp"
+        android:layout_height="134dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/logo_nexus" />
+
+    <!-- Titre de la page -->
+    <TextView
+        android:id="@+id/text_view_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_speed"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000080"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/logo_imageview"
+        android:layout_marginTop="30dp" />
+
+    <!-- Barre de progression pour la vitesse -->
+    <SeekBar
+        android:id="@+id/seek_bar_speed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_title"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp" />
+
+    <!-- Texte affichant la vitesse sélectionnée -->
+    <TextView
+        android:id="@+id/text_view_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/selected_speed"
+        android:textSize="18sp"
+        android:textColor="#000080"
+        android:layout_below="@id/seek_bar_speed"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <!-- Bouton pour commencer -->
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_button"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/text_view_speed"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+package com.example.smartglasses;
+
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.View;
+import android.widget.Button;
+import androidx.appcompat.app.AppCompatActivity;
+import java.util.Locale;
+
+public class SelectLanguageActivity extends BaseActivity {
+
+    private Button buttonArabic;
+    private Button buttonFrench;
+    private Button buttonEnglish;
+    private Button buttonNext;
+
+    // Variable pour suivre la langue sélectionnée
+    private Button selectedButton;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_select_language);
+
+        buttonArabic = findViewById(R.id.button_arabic);
+        buttonFrench = findViewById(R.id.button_french);
+        buttonEnglish = findViewById(R.id.button_english);
+        buttonNext = findViewById(R.id.button_next);
+
+        View.OnClickListener languageClickListener = v -> {
+            // Réinitialiser la couleur de fond des boutons
+            resetButtonBackground();
+
+            // Changer la couleur de fond du bouton sélectionné en gris
+            v.setBackgroundColor(getResources().getColor(R.color.gray));
+
+            // Enregistrer le bouton sélectionné
+            selectedButton = (Button) v;
+
+
+            // Enregistrer la langue sélectionnée dans les préférences partagées
+            String languageCode = "";
+            switch (v.getId()) {
+                case R.id.button_arabic:
+                    languageCode = "ar";
+                    break;
+                case R.id.button_french:
+                    languageCode = "fr";
+                    break;
+                case R.id.button_english:
+                    languageCode = "en";
+                    break;
+            }
+            saveLanguagePreference(languageCode);
+
+            // Changer la langue de l'application
+            setLocale(languageCode);
+            setResult(RESULT_OK);
+            finish();
+        };
+
+        buttonArabic.setOnClickListener(languageClickListener);
+        buttonFrench.setOnClickListener(languageClickListener);
+        buttonEnglish.setOnClickListener(languageClickListener);
+    }
+
+    // Réinitialiser la couleur de fond des boutons
+    private void resetButtonBackground() {
+        buttonArabic.setBackgroundColor(getResources().getColor(R.color.blue)); // Remplacez "blue" par la couleur d'origine
+        buttonFrench.setBackgroundColor(getResources().getColor(R.color.blue)); // Remplacez "blue" par la couleur d'origine
+        buttonEnglish.setBackgroundColor(getResources().getColor(R.color.blue)); // Remplacez "blue" par la couleur d'origine
+    }
+
+    // Méthode pour changer la langue de l'application
+    private void setLocale(String languageCode) {
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.setLocale(new Locale(languageCode.toLowerCase()));
+        res.updateConfiguration(conf, dm);
+    }
+
+    // Enregistrer la langue sélectionnée dans les préférences partagées
+    private void saveLanguagePreference(String languageCode) {
+        SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("My_Lang", languageCode);
+        editor.apply();
+    }
+}

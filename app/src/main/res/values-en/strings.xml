@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="button_text">Determine Text</string>
+    <string name="button_couleur">Determine Color</string>
+    <string name="button_objet">Determine Object</string>
+    <string name="button_next">→</string>
+    <string name="welcome_text">At NEXUS Innovations, we are dedicated to transforming the lives of visually impaired people through technological innovation. As a non-profit organization, our mission is to develop smart glasses that provide advanced visual assistance, facilitating autonomy and inclusion. We believe everyone deserves to live fully, and we work tirelessly to make that possible.</string>
+    <string name="bienvenue_text">Welcome to NEXUS Innovations, the home of innovation for inclusion.</string>
+    <string name="apropos_button">About Us</string>
+    <string name="choose_speed">Choose Reading Speed</string>
+    <string name="selected_speed">50%</string>
+    <string name="start_button">Start</string>
+    <string name="connect_button">Sign In</string>
+    <string name="change_language">langue</string>
+</resources>

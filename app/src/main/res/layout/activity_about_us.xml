@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blanc"
+    android:padding="16dp">
+
+    <!-- Logo -->
+
+    <!-- CardView contenant le texte -->
+
+    <ImageView
+        android:id="@+id/logo_imageview"
+        android:layout_width="212dp"
+        android:layout_height="134dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/logo_nexus"
+        cardview:layout_constraintEnd_toEndOf="parent"
+        cardview:layout_constraintHorizontal_bias="0.5"
+        cardview:layout_constraintStart_toStartOf="parent"
+        cardview:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/text_cardview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        cardview:cardBackgroundColor="#FFFFFF"
+        cardview:cardCornerRadius="8dp"
+        cardview:cardElevation="4dp"
+        cardview:cardUseCompatPadding="true"
+        cardview:layout_constraintLeft_toLeftOf="parent"
+        cardview:layout_constraintRight_toRightOf="parent"
+        cardview:layout_constraintTop_toBottomOf="@id/logo_imageview">
+
+        <TextView
+            android:id="@+id/welcome_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="@string/welcome_text"
+            android:textColor="#000080"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/blanc">
+
+    <!-- Logo en haut au centre -->
+    <ImageView
+        android:id="@+id/logo_imageview"
+        android:layout_width="212dp"
+        android:layout_height="134dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/logo_nexus" />
+
+    <!-- Conteneur pour le reste du contenu -->
+    <RelativeLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/logo_imageview"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <!-- Texte Sélectionnez votre langue -->
+        <TextView
+            android:id="@+id/select_language_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sélectionnez votre langue"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000080"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp" />
+
+        <!-- Boutons de langue -->
+        <Button
+            android:id="@+id/button_arabic"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="العربية"
+            android:textSize="18sp"
+            android:layout_below="@id/select_language_textview"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="#000080"
+            android:textColor="#FFFFFF"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" />
+
+        <Button
+            android:id="@+id/button_french"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Français"
+            android:textSize="18sp"
+            android:layout_below="@id/button_arabic"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="#000080"
+            android:textColor="#FFFFFF"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" />
+
+        <Button
+            android:id="@+id/button_english"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="English"
+            android:textSize="18sp"
+            android:layout_below="@id/button_french"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="#000080"
+            android:textColor="#FFFFFF"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" />
+
+    </RelativeLayout>
+
+    <!-- Bouton Flèche pour continuer -->
+    <Button
+        android:id="@+id/button_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="→"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:background="#000080"
+        android:textColor="#FFFFFF"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

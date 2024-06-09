@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/blanc">
+
+    <!-- Logo en haut au centre -->
+    <ImageView
+        android:id="@+id/logo_imageview"
+        android:layout_width="212dp"
+        android:layout_height="134dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/logo_nexus" />
+
+    <!-- Bouton pour choisir le texte -->
+    <Button
+        android:id="@+id/button_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_text"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/logo_imageview"
+        android:layout_marginTop="50dp" />
+
+    <!-- Bouton pour choisir la couleur -->
+    <Button
+        android:id="@+id/button_couleur"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_couleur"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/button_text"
+        android:layout_marginTop="20dp" />
+
+    <!-- Bouton pour choisir l'objet -->
+    <Button
+        android:id="@+id/button_objet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_objet"
+        android:layout_below="@id/button_couleur"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <!-- Bouton flèche pour continuer -->
+    <Button
+        android:id="@+id/button_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_next"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:background="#000080"
+        android:textColor="#FFFFFF"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -40,9 +40,6 @@ public class ChoixActivity extends BaseActivity {
             buttonCouleur.getBackground().setColorFilter(getResources().getColor(R.color.gray), android.graphics.PorterDuff.Mode.MULTIPLY);
             buttonObjet.getBackground().clearColorFilter();
 
-            // Show the next button
-            buttonNext.setVisibility(View.VISIBLE);
-
             // Send the script name to the next intent
             Intent intent = new Intent(ChoixActivity.this, VitesseActivity.class);
             intent.putExtra("functionality", "detectText");

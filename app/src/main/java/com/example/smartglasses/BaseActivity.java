@@ -18,7 +18,6 @@ import java.util.Locale;
 
 public class BaseActivity extends AppCompatActivity {
 
-    // Constante pour la demande startActivityForResult()
     private static final int REQUEST_SELECT_LANGUAGE = 1;
 
     @Override
@@ -38,7 +37,6 @@ public class BaseActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_language:
-                // Démarrer SelectLanguageActivity avec startActivityForResult()
                 Intent intent = new Intent(BaseActivity.this, SelectLanguageActivity.class);
                 startActivityForResult(intent, REQUEST_SELECT_LANGUAGE);
                 return true;
@@ -47,14 +45,12 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
 
-    // Charger la langue enregistrée dans les préférences partagées
     public void loadLocale() {
         SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
         String languageCode = prefs.getString("My_Lang", "en");
         setLocale(languageCode);
     }
 
-    // Appliquer la langue
     private void setLocale(String languageCode) {
         Resources res = getResources();
         DisplayMetrics dm = res.getDisplayMetrics();
@@ -63,7 +59,6 @@ public class BaseActivity extends AppCompatActivity {
         res.updateConfiguration(conf, dm);
     }
 
-    // Recevoir le résultat retourné par SelectLanguageActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

@@ -17,8 +17,6 @@ public class SelectLanguageActivity extends BaseActivity {
     private Button buttonFrench;
     private Button buttonEnglish;
     private Button buttonNext;
-
-    // Variable pour suivre la langue sélectionnée
     private Button selectedButton;
 
     @Override
@@ -32,17 +30,10 @@ public class SelectLanguageActivity extends BaseActivity {
         buttonNext = findViewById(R.id.button_next);
 
         View.OnClickListener languageClickListener = v -> {
-            // Réinitialiser la couleur de fond des boutons
             resetButtonBackground();
-
-            // Changer la couleur de fond du bouton sélectionné en gris
             v.setBackgroundColor(getResources().getColor(R.color.gray));
-
-            // Enregistrer le bouton sélectionné
             selectedButton = (Button) v;
 
-
-            // Enregistrer la langue sélectionnée dans les préférences partagées
             String languageCode = "";
             switch (v.getId()) {
                 case R.id.button_arabic:
@@ -56,8 +47,6 @@ public class SelectLanguageActivity extends BaseActivity {
                     break;
             }
             saveLanguagePreference(languageCode);
-
-            // Changer la langue de l'application
             setLocale(languageCode);
             setResult(RESULT_OK);
             finish();
@@ -66,16 +55,15 @@ public class SelectLanguageActivity extends BaseActivity {
         buttonArabic.setOnClickListener(languageClickListener);
         buttonFrench.setOnClickListener(languageClickListener);
         buttonEnglish.setOnClickListener(languageClickListener);
+
     }
 
-    // Réinitialiser la couleur de fond des boutons
     private void resetButtonBackground() {
-        buttonArabic.setBackgroundColor(getResources().getColor(R.color.blue)); // Remplacez "blue" par la couleur d'origine
-        buttonFrench.setBackgroundColor(getResources().getColor(R.color.blue)); // Remplacez "blue" par la couleur d'origine
-        buttonEnglish.setBackgroundColor(getResources().getColor(R.color.blue)); // Remplacez "blue" par la couleur d'origine
+        buttonArabic.setBackgroundColor(getResources().getColor(R.color.blue));
+        buttonFrench.setBackgroundColor(getResources().getColor(R.color.blue));
+        buttonEnglish.setBackgroundColor(getResources().getColor(R.color.blue));
     }
 
-    // Méthode pour changer la langue de l'application
     private void setLocale(String languageCode) {
         Resources res = getResources();
         DisplayMetrics dm = res.getDisplayMetrics();
@@ -84,7 +72,6 @@ public class SelectLanguageActivity extends BaseActivity {
         res.updateConfiguration(conf, dm);
     }
 
-    // Enregistrer la langue sélectionnée dans les préférences partagées
     private void saveLanguagePreference(String languageCode) {
         SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();

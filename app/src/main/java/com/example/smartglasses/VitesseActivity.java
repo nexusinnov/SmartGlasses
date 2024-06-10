@@ -20,15 +20,16 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Locale;
+import android.content.SharedPreferences;
 
 public class VitesseActivity extends BaseActivity {
-
 
     private static final String TAG = "Picture";
     private SeekBar seekBar;
     private TextView textViewSpeed;
     private Button buttonStart;
     private String functionality;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,18 +61,18 @@ public class VitesseActivity extends BaseActivity {
         buttonStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 sendScriptName(functionality);
             }
         });
     }
+
     private void sendScriptName(String scriptName) {
         RequestQueue queue = Volley.newRequestQueue(this);
         String url = "http://192.168.137.76:5000/execute";
         JSONObject jsonObject = new JSONObject();
 
-        // Get the current language code
-        String language = Locale.getDefault().getLanguage();
+        // Get the preferred language from shared preferences
+        String language = getPreferredLanguage();
 
         try {
             jsonObject.put("script_name", scriptName);
@@ -99,5 +100,9 @@ public class VitesseActivity extends BaseActivity {
         Log.d(TAG, "Request sent: " + scriptName);
     }
 
+    // Method to get the preferred language from shared preferences
+    private String getPreferredLanguage() {
+        SharedPreferences prefs = getSharedPreferences("Settings", MODE_PRIVATE);
+        return prefs.getString("My_Lang", "en"); // Default to English if no preference is set
+    }
 }
-

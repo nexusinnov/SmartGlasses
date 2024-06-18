@@ -4,11 +4,16 @@
     <string name="button_couleur">تحديد اللون</string>
     <string name="button_objet">تحديد الكائن</string>
     <string name="button_next">→</string>
-    <string name="bienvenue_text">مرحبًا بك في NEXUS Innovations، موطن الابتكار من أجل الاندماج.</string>
-    <string name="welcome_text">في NEXUS Innovations، نحن ملتزمون بتحويل حياة الأشخاص ضعاف البصر من خلال الابتكار التكنولوجي. كمنظمة غير ربحية، مهمتنا هي تطوير نظارات ذكية توفر مساعدة بصرية متقدمة، مما يسهل الاستقلالية والاندماج. نحن نؤمن بأن الجميع يستحقون أن يعيشوا حياة كاملة ونعمل بلا كلل لجعل ذلك ممكنًا.</string>
+    <string name="welcome_text">في NEXUS Innovations، نحن ملتزمون بتحويل حياة الأشخاص ذوي الإعاقة البصرية من خلال الابتكار التكنولوجي. كمؤسسة غير ربحية، مهمتنا هي تطوير نظارات ذكية توفر مساعدة بصرية متقدمة، مما يسهل الاستقلالية والإدماج. نحن نؤمن بأن الجميع يستحقون أن يعيشوا بشكل كامل، ونعمل بلا كلل لتحقيق ذلك.</string>
+    <string name="bienvenue_text">مرحبًا بكم في NEXUS Innovations، موطن الابتكار من أجل الإدماج.</string>
+    <string name="apropos_button">معلومات عنا</string>
     <string name="choose_speed">اختر سرعة القراءة</string>
     <string name="selected_speed">50%</string>
-    <string name="start_button">ابدأ</string><string name="apropos_button">عنا</string>
+    <string name="start_button">ابدأ</string>
     <string name="connect_button">ابدأ</string>
-    <string name="change_language">اللغة</string>
+    <string name="change_language">لغة</string>
+    <!-- Messages d'annonce من النقر -->
+    <string name="apropos_button_clicked">تم النقر على زر معلومات عنا</string>
+    <string name="connect_button_clicked">تم النقر على زر ابدأ</string>
+    <string name="button_clique">انقر مرتين للتفعيل</string>
 </resources>

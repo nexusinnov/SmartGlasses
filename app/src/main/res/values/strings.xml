@@ -1,16 +1,20 @@
 <resources>
     <string name="app_name" translatable="false">NEXUS Innovations</string>
     <string name="speed_percentage" translatable="false">%d%%</string>
-    <string name="button_text">Détérminer le texte</string>
-    <string name="button_couleur">Détérminer la couleur</string>
-    <string name="button_objet">Détérminer un objet</string>
+    <string name="button_text">Déterminer le texte</string>
+    <string name="button_couleur">Déterminer la couleur</string>
+    <string name="button_objet">Déterminer l\'objet</string>
     <string name="button_next">→</string>
-    <string name="welcome_text" >Chez NEXUS Innovations, nous sommes dédiés à transformer la vie des personnes malvoyantes grâce à l\'innovation technologique.\n\nEn tant qu\'organisation à but non lucratif, notre mission est de développer des lunettes intelligentes qui offrent une assistance visuelle avancée, facilitant ainsi l\'autonomie et l\'inclusion. Nous croyons que chacun mérite de vivre pleinement et nous travaillons sans relâche pour rendre cela possible.</string>
-    <string name="bienvenue_text">Bienvenue dans NEXUS Innovations, le foyer de l\'innovation au service de l\'inclusion.</string>
-    <string name="choose_speed">Choisissez la vitesse de lecture</string>
+    <string name="welcome_text">Chez NEXUS Innovations, nous nous engageons à transformer la vie des personnes malvoyantes grâce à l\'innovation technologique. En tant qu\'organisation à but non lucratif, notre mission est de développer des lunettes intelligentes qui offrent une assistance visuelle avancée, facilitant l\'autonomie et l\'inclusion. Nous croyons que chacun mérite de vivre pleinement, et nous travaillons sans relâche pour que cela soit possible.</string>
+    <string name="bienvenue_text">Bienvenue chez NEXUS Innovations, le foyer de l\'innovation pour l\'inclusion.</string>
+    <string name="apropos_button">À propos de nous</string>
+    <string name="choose_speed">Choisir la vitesse de lecture</string>
     <string name="selected_speed">50%</string>
     <string name="start_button">Commencer</string>
-    <string name="apropos_button">À propos de nous</string>
     <string name="connect_button">Commencer</string>
-    <string name="change_language">langue</string>
+    <string name="change_language">Langue</string>
+    <!-- Messages d'annonce de clic -->
+    <string name="apropos_button_clicked">Bouton À propos de nous cliqué</string>
+    <string name="connect_button_clicked">Bouton Commencer cliqué</string>
+    <string name="button_clique"> Appuyer deux fois pour l\'activer</string>
 </resources>

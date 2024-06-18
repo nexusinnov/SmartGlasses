@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="button_text">Determine Text</string>
     <string name="button_couleur">Determine Color</string>
@@ -12,4 +11,9 @@
     <string name="start_button">Start</string>
     <string name="connect_button">Start</string>
     <string name="change_language">langue</string>
+    <!-- Messages d'annonce de clic -->
+    <string name="apropos_button_clicked">About Us button clicked</string>
+    <string name="connect_button_clicked">Start button clicked</string>
+    <string name="button_clique">Press twice to activate</string>
+
 </resources>
